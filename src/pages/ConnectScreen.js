@@ -79,29 +79,30 @@ const ConnectScreen = () => {
   }
 
   const createUser = async () => {
-    try {
-      const res = await axios.post(
-        "https://841d-106-206-4-13.in.ngrok.io/createUser",
-        {
-          name: "eth-jashan",
-          addr: accountAddress,
-          discordId: discordCode,
-          twitterId: `https://github.com/eth-jashan`,
-        },
-        {
-          headers: {
-            Authorization: `${authorization.value.idToken.__raw}`,
-          },
-        }
-      );
-      console.log("ress", res, github);
-      return true;
-    } catch (error) {
-      console.log("error", error.toString());
-      return false;
-    }
+    // try {
+    //   const res = await axios.post(
+    //     "https://841d-106-206-4-13.in.ngrok.io/createUser",
+    //     {
+    //       name: "eth-jashan",
+    //       addr: accountAddress,
+    //       discordId: discordCode,
+    //       twitterId: `https://github.com/eth-jashan`,
+    //     },
+    //     {
+    //       headers: {
+    //         Authorization: `${authorization.value.idToken.__raw}`,
+    //       },
+    //     }
+    //   );
+    //   console.log("ress", res, github);
+    //   return true;
+    // } catch (error) {
+    //   console.log("error", error.toString());
+    //   return false;
+    // }
     // return true;
     // console.log("user", a);
+    console.log(authorization.value.idToken.__raw);
   };
 
   const joinToCommunity = async () => {

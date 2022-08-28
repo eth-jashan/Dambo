@@ -14,7 +14,6 @@ import DashboardHeader from "../components/DashboardHeader";
 import { IoClose } from "react-icons/io5";
 import { IoMdCheckmark } from "react-icons/io";
 import { task } from "../utils/task";
-import { getMembership } from "../utils/web3";
 
 const DashboardScreen = () => {
   const [route, setRoute] = useState("profile");
